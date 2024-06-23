@@ -27,7 +27,7 @@ public class ApprenantService {
     return repository.findAll();
   }
 
-  public boolean updateApprenant(Apprenant apprenant, Long id) {
+  public Boolean updateApprenant(Apprenant apprenant, Long id) {
     final Optional<Apprenant> optionalApprenant = repository.findById(id);
 
     if (optionalApprenant.isPresent()) {
@@ -47,7 +47,7 @@ public class ApprenantService {
     return false;
   }
 
-  public boolean deleteApprenant(Long id) {
+  public Boolean deleteApprenant(Long id) {
     final Optional<Apprenant> optionalApprenant = repository.findById(id);
 
     if (optionalApprenant.isPresent()) {
